@@ -13,5 +13,6 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
 
 # add dotfiles
 RUN git clone https://github.com/apiary-cc/aec-dotfiles /home/vscode/temp
+RUN chmod a=rw -R /home/vscode/temp
 RUN mv /home/vscode/temp/.bash_profile /home/vscode/temp/.bashrc /home/vscode/temp/.gitconfig /home/vscode/
 RUN rm -rf /home/vscode/temp
